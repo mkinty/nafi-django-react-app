@@ -63,7 +63,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'frontend/build',
+            BASE_DIR / 'build',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -130,8 +130,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR/'frontend/build/static', ]
-STATIC_ROOT = BASE_DIR / 'frontend/build/static/'
+STATICFILES_DIRS = [BASE_DIR/'build/static', ]
+
+# for dev add  STATIC_ROOT and STATICFILES_STORAGE
+STATIC_ROOT = BASE_DIR / 'staticfiles/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
