@@ -131,7 +131,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR/'frontend/build/static', ]
-STATIC_ROOT = BASE_DIR / 'frontend/build/staticfiles/'
+STATIC_ROOT = BASE_DIR / 'frontend/build/static/'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
