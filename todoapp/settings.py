@@ -27,7 +27,8 @@ SECRET_KEY = '@g=c6@00cq$8&f%ml)0c12va!w5)wu6q_zoe((&xq2-s##ryc0'
 # DEBUG = True
 DEBUG = False  # comment in dev
 
-ALLOWED_HOSTS = ['nafi-rdapp.herokuapp.com', '127.0.0.1']  # comment in dev
+ALLOWED_HOSTS = ['nafi-rdapp.herokuapp.com',
+                 '127.0.0.1', 'localhost']  # comment in dev
 # ALLOWED_HOSTS = []  # don't in dev
 
 
@@ -136,6 +137,11 @@ STATICFILES_DIRS = [BASE_DIR / 'build/static', ]
 STATIC_ROOT = BASE_DIR / 'staticfiles/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+
+# Option 1
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
+
+# Option 2
+CORS_ORIGIN_ALLOW_ALL = True
