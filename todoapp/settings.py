@@ -28,7 +28,7 @@ SECRET_KEY = '@g=c6@00cq$8&f%ml)0c12va!w5)wu6q_zoe((&xq2-s##ryc0'
 DEBUG = False  # comment in dev
 
 ALLOWED_HOSTS = ['nafi-rdapp.herokuapp.com', '127.0.0.1']  # comment in dev
-ALLOWED_HOSTS = []  # don't in dev
+# ALLOWED_HOSTS = []  # don't in dev
 
 
 # Application definition
