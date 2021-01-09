@@ -48,7 +48,7 @@ export default class App extends Component {
 
   fetchTasks() {
     console.log("Fetching ...");
-    fetch("http://127.0.0.1:8000/api/task-list/")
+    fetch("https://nafi-rdapp.herokuapp.com/api/task-list/")
       .then((response) => response.json())
       .then((data) =>
         this.setState({
@@ -74,9 +74,9 @@ export default class App extends Component {
     e.preventDefault();
     console.log("ITEM", this.state.activeItem);
     const csrftoken = this.getCookie("csrftoken");
-    let url = "http://127.0.0.1:8000/api/task-create/";
+    let url = "https://nafi-rdapp.herokuapp.com/api/task-create/";
     if (this.state.editing === true) {
-      url = `http://127.0.0.1:8000/api/task-update/${this.state.activeItem.id}/`;
+      url = `https://nafi-rdapp.herokuapp.com/api/task-update/${this.state.activeItem.id}/`;
       this.setState({
         editing: false,
       });
@@ -113,7 +113,7 @@ export default class App extends Component {
 
   deleteItem(task) {
     const csrftoken = this.getCookie("csrftoken");
-    fetch(`http://127.0.0.1:8000/api/task-delete/${task.id}/`, {
+    fetch(`https://nafi-rdapp.herokuapp.com/api/task-delete/${task.id}/`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
@@ -128,7 +128,7 @@ export default class App extends Component {
     task.completed = !task.completed;
     console.log("TASK", task.completed);
     const csrftoken = this.getCookie("csrftoken");
-    const url = `http://127.0.0.1:8000/api/task-update/${task.id}/`;
+    const url = `https://nafi-rdapp.herokuapp.com/api/task-update/${task.id}/`;
     fetch(url, {
       method: "POST",
       headers: {
