@@ -137,6 +137,8 @@ STATICFILES_DIRS = [BASE_DIR / 'build/static', ]
 STATIC_ROOT = BASE_DIR / 'staticfiles/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+WHITENOISE_ROOT = BASE_DIR / 'build/root'
+
 
 # Option 1
 CORS_ALLOWED_ORIGINS = [
