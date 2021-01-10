@@ -136,19 +136,19 @@ STATICFILES_DIRS = [BASE_DIR / 'build/static', ]
 
 # for dev add  STATIC_ROOT and STATICFILES_STORAGE
 STATIC_ROOT = BASE_DIR / 'static/'
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# WHITENOISE_ROOT = BASE_DIR / 'build/root'
+WHITENOISE_ROOT = BASE_DIR / 'build/root'
 
 
-# S3 BUCKET CONFIG
-AWS_ACCESS_KEY_ID = 'AKIAWSSAEUG5P2CTDQUC'
-AWS_SECRET_ACCESS_KEY = '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'
+# # S3 BUCKET CONFIG
+# AWS_ACCESS_KEY_ID = 'AKIAWSSAEUG5P2CTDQUC'
+# AWS_SECRET_ACCESS_KEY = '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'
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_STORAGE_BUCKET_NAME = 'nafi-djang-react-bucket'
-AWS_S3_REGION_NAME = 'eu-west-3'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS_STORAGE_BUCKET_NAME = 'nafi-djang-react-bucket'
+# AWS_S3_REGION_NAME = 'eu-west-3'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 # Option 1
