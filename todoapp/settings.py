@@ -135,10 +135,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'build/static', ]
 
 # for dev add  STATIC_ROOT and STATICFILES_STORAGE
-STATIC_ROOT = BASE_DIR / 'staticfiles/'
+STATIC_ROOT = BASE_DIR / 'static/'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-WHITENOISE_ROOT = BASE_DIR / 'build/root'
+# WHITENOISE_ROOT = BASE_DIR / 'build/root'
 
 
 # S3 BUCKET CONFIG
